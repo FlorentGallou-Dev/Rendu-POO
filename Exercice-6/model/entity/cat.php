@@ -79,7 +79,7 @@ class Cat
         }
     }
 
-    public function __construct($data)
+    public function __construct(?array $data=null)
     {
         if ($data) {
             foreach ($data as $key => $value) {

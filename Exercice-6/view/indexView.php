@@ -12,7 +12,7 @@
         <h1>Liste des chats en base de données</h1>
         <ul>
             <?php foreach($cats as $cat): ?>
-                <li><?php echo $cat->getName(); ?></li>
+                <li><?php echo $cat->getName(); ?>, chat <?php echo $cat->getSex(); ?> de <?php echo $cat->getAge(); ?> ans au pelage <?php echo $cat->getColor(); ?>.</li>
             <?php endforeach ?>
         </ul>
         <h2>Enregistrer un nouveau chat</h2>
@@ -22,7 +22,7 @@
             <p><label>Age : </label><input type="number" name="age"></p>
             <p><label>Sexe : </label><input type="text" name="sex"></p>
             <p><label>Couleur : </label><input type="text" name="color"></p>
-            <p><button type="submit" name="addPerson">Envoyer</button></p>
+            <p><button type="submit" name="addCat">Envoyer</button></p>
         </form>
     </body>
 </html>

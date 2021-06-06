@@ -16,13 +16,12 @@
                 "color" => $cat->getColor()
             ]);
         }
+
         public function getCats() {
             $response = $this->bdd->query("SELECT * FROM cat");
             
             $response->setFetchMode(PDO::FETCH_CLASS, 'Cat');
-
             $result = $response->fetchAll();
-            var_dump($result);
 
             return $result;
         }
